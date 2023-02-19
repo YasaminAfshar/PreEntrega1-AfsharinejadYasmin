@@ -1,4 +1,134 @@
+/*Importar FONT FAMILY*/
 
-.titleForm {
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+/*font-family: 'Aboreto', cursive;*/
+
+
+/*------>Estilos del NAVBAR*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+.containerNavbar {
+    display: fixed;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255,157,140);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+    .containerNavbar img {
+        width: 20em;
+        height: 7em;
+        margin: 10px 25px;
+    }
+        
+    .containerList {
+        display: flex;
+        gap: 20px;
+        align-self: center;
+        text-align: center;
+    }
+
+        .containerList li {
+            list-style: none;
+        }
+            
+            .containerList li a {
+                position: relative;
+                display: block;
+                cursor: pointer;
+                text-decoration: none;
+                font-weight: bold;
+                color: black;
+                font-family: 'Aboreto', cursive;
+                font-weight: bolder;
+                font-size: 1.15em;
+                text-shadow: 2px -2px 3px #000000;
+                text-decoration: none;
+                transition: .5s;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                padding: 10px 15px;
+            }
+
+                .containerList li a:hover {
+                    color: black;
+                }
+
+                .containerList li a:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-top: 3px solid rgba(134, 33, 15, 0.759);
+                    border-bottom: 3px solid rgba(134, 33, 15, 0.759);
+                    transform: scaleY(2);
+                    opacity: 0;
+                    transition: 0.3s;
+                }
+
+                    .containerList li a:hover:before {
+                        transform: scaleY(1);
+                        opacity: 1;
+                    }
+
+                .containerList li a:after {
+                    content: "";
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(134, 33, 15, 0.527);
+                    transform: scale(0);
+                    opacity: 0;
+                    transition: 0.3s;
+                    z-index: -1;
+                }
+
+                    .containerList li a:hover:after {
+                        transform: scaleY(1);
+                        opacity: 1;
+                    }
+
+               
+
+                   
+                   
+
+
+            
+
+            
+
+            
+               
+
+        
+
+
+
+
+
+/*----------->MEDIA QUERIES*/
+
+@media screen and (min-width: 1450px) {
+    .containerList {
+        font-size: 1.2em;
+        gap: 50px;
+    }
+}
+
+
+
+
