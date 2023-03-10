@@ -1,5 +1,5 @@
 
-/*------>Estilos del CARRITO DE COMPRAS*/
+/*------>Estilos GENERAL del CARRITO DE COMPRAS*/
 
 * {
     margin: 0;
@@ -7,21 +7,29 @@
     box-sizing: border-box;
 }
 
+
+/*------>Estilos ESPECÍFICOS del CARRITO DE COMPRAS*/
+
 .cartContainer {
     display: flex;
     justify-content: center;
+    position: relative;
     align-items: center;
     margin: 30px;
     cursor: pointer;
 }
 
     .cartContainer span {
-        display: flex;
-        align-self: start;
-        font-size: 1.6em;
+        position: absolute;
+        font-size: 1.5em;
+        color: white;
         font-family: Arial, Helvetica, sans-serif;
         background-color: #d6513ab0;
         border-radius: 40%;
-        padding: 0 5px;
-        margin-left: 10px;
+        padding: 3px 5px;
+        top: -50%;
+        right: -8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }

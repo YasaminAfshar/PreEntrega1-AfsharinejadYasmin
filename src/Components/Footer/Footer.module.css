@@ -1,0 +1,123 @@
+
+.containerFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(35, 32, 29);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+    .containerRedes {
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .logotype {
+            margin-bottom: 20px;
+        }
+
+            .logotype img {
+                width: 240px;
+            }
+
+    .containerFooterImg {
+        display: flex;
+        justify-content: center;
+    }
+    
+        .footerImg {
+            width: 3.3rem;
+            margin: 20px 18px;
+        }
+
+            .footerImg:hover {
+                transform: scale(1.2);
+                transition: transform 0.4s;
+            }
+
+    .containerInfo {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+        .infoContacto {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .infoContacto ul {
+                list-style: none;
+                color: white;
+                padding: 5px;
+                text-align: center;
+                padding-bottom: 20px;
+            }
+
+                .infoContacto ul li {
+                    padding-bottom: 8px;
+                }
+
+
+
+/*----------->MEDIA QUERIES*/
+
+@media  (min-width:280px) and (max-width: 320px) {
+    .footerImg {
+        width: 3rem;
+    }
+}
+
+
+@media screen and (min-width: 850px) {
+    .containerRedes {
+        width: 100%;
+        flex-direction: row;
+    }
+
+        .logotype {
+            margin-right: 50px;
+        }
+}
+
+
+@media screen and (min-width: 1050px) {
+    .containerFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+        .containerRedes {
+            margin: 20px 30px 0 0;
+            width: 60%;
+            flex-direction: row;
+        }
+
+            .logotype {
+                margin-right: 70px;
+                margin-left: 20px;
+            }
+
+        .containerInfo {
+            margin-top: 20px;
+            width: 50%;
+        }
+
+            .infoContacto {
+                display: flex;
+                flex-direction: column;
+            }
+
+                .infoContacto ul li {
+                    font-size: 1.2em;
+                }
+}

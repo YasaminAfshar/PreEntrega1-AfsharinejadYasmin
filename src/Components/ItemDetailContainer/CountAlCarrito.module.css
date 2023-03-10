@@ -1,0 +1,35 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.containerCount {
+    margin: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+    .containerButtons {
+        margin: 20px 0 ;
+        background-color: #ab47bc;
+    }
+
+
+
+
+/*----------->MEDIA QUERIES*/
+
+@media screen and (min-width: 1120px) {
+    .containerCount {
+        margin: 40px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}

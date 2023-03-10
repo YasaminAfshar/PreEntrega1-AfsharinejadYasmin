@@ -1,16 +1,53 @@
 
-//Importa el archivo de CSS
-import styles from "./ItemListContainer.module.css";
+//Importar archivos complementarios
 
+import ItemList from "../ItemList/ItemList";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { productos } from "../../productsMock";
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
+
+  const { categoryId } = useParams();
+
+  const [catalogo, setCatalogo] = useState([]);
+
+  const productosFiltrados = productos.filter(
+    (elemento) => elemento.category === categoryId
+  );
+
+  useEffect(() => {
+    const listaProductos = new Promise((resolve, reject) => {
+      resolve(categoryId ? productosFiltrados : productos);
+    });
+
+    listaProductos
+      .then((res) => {
+        setCatalogo(res);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [categoryId]);
+
   return (
-    <div className={styles.itemContainer}>
-      <h1>{greeting}</h1>
-      <img
-        src="https://res.cloudinary.com/dsrdpgpzy/image/upload/v1676792818/MULTIMEDIA/f4b4dc0aea2bf35503df00a96b9ad4dc_pqcuam.jpg"
-        alt="Ícono de carita feliz o sonriente"
-      />
+    <div
+      style={{
+        backgroundColor: " #cb6452cf",
+      }}
+    >
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <img
+          src="https://res.cloudinary.com/dsrdpgpzy/image/upload/v1676764508/MULTIMEDIA/portada1_ltgooi.png"
+          alt="Portada que comenta sobre el descuento que se aplica en caso de superar los $2.500 en tu compra"
+          style={{
+            width: "85%",
+            margin: "30px 20px",
+            boxShadow: "rgba(0, 0, 0, 0.2) 0px 20px 30px",
+          }}
+        />
+      </div>
+      <ItemList catalogo={catalogo} />
     </div>
   );
 };

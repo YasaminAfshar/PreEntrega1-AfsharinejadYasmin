@@ -1,18 +1,25 @@
 
+//Importar Link de Router
+import { Link } from "react-router-dom";
+
 //Importa el archivo de CSS
 import style from "./CartWidget.module.css";
 
 //Importar libreria de iconos
-import { FaShoppingCart } from "react-icons/fa";
+import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 
 
 const CartWidget = () => {
+
   return (
-    <div className={style.cartContainer}>
-      <FaShoppingCart color="black" size={50} />
-      <span>0</span>
-    </div>
+    <Link to="/cart">
+      <div className={style.cartContainer}>
+        <AddShoppingCartOutlinedIcon sx={{ fontSize: 50, color: "black" }} />
+        <span>0</span>
+      </div>
+    </Link>
   );
+
 }
 
 export default CartWidget;

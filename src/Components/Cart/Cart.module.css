@@ -1,0 +1,104 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containerCart {
+    background-color: #cb6452b2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+    .carritoCompras {
+        background-color: #c64a34bf;
+        width: 80%;
+        height: auto;
+        display: flex;
+        align-self: center;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+
+        .title1 {
+            font-size: 2em;
+            text-align: center;
+            font-family: 'Oleo Script', cursive;
+            text-shadow: 4px -3px 3px rgba(255,255,255,0.6);
+            padding: 10px;
+        }
+
+        .productosSeleccionados {
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+            .title2 {
+                font-size: 1.4em;
+                font-family: 'PT Sans Caption', sans-serif;
+                padding: 10px 0 10px 30px;
+            }
+
+        .containerBoton {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+
+
+
+/*----------->MEDIA QUERIES*/
+
+
+@media screen and (min-width: 760px) {
+
+}
+
+
+@media screen and (min-width: 800px) {
+    .title1 {
+        font-size: 2.8em;
+    }
+
+    .title2 {
+        font-size: 1.6em;
+    }
+
+    .containerBoton {
+        display: flex;
+        justify-content: end;
+    }
+
+     .containerBoton {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+
+@media screen and (min-width: 1020px) {
+     .productosSeleccionados {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .title1 {
+        font-size: 3.4em;
+    }
+
+    .title2 {
+        font-size: 2em;
+    }
+}
