@@ -45,6 +45,7 @@ const Checkout = ({ setOrderId, vaciarCarrito }) => {
       cart.map((item) => {
         let docOrder = doc(db, "productos", item.id)
         updateDoc(docOrder,{stock: item.stock - item.quantity});
+        return item
       })
   };
 
