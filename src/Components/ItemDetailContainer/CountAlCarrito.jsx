@@ -32,7 +32,7 @@ const CountAlCarrito = ({ stock, initial = 1, onAdd }) => {
       <Button onClick={restar} key="three">
         <RemoveCircleOutlineIcon/> Restar
       </Button>,
-      <Button key="two">{contador}</Button>,
+      <Button key="two" style={{fontSize:"1.3em"}}>{contador}</Button>,
       <Button onClick={sumar} key="one">
         <AddCircleOutlineIcon/> Sumar
       </Button>,

@@ -99,7 +99,7 @@
                         transform: scaleY(1);
                         opacity: 1;
                     }
-
+ 
 
 
 /*----------->MEDIA QUERIES*/
@@ -109,4 +109,4 @@
         font-size: 1.2em;
         gap: 50px;
     }
-}
+} 

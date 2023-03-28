@@ -3,7 +3,6 @@
 import ItemDetail from "./ItemDetail"
 
 
-
 const ItemList = ( {catalogo} ) => {
   return (
     <div

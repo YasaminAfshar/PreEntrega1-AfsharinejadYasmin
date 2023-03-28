@@ -1,0 +1,214 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+/*font-family: 'Dosis', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+/*font-family: 'Oswald', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@600&display=swap');
+/*font-family: 'Yanone Kaffeesatz', sans-serif;*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titleFormulario{
+    color: white;
+    background-color: #c62828de;
+    margin: 30px 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    padding: 10px 0;
+    text-shadow: 4px 2px 2px #56565c;
+    border-radius: 10%;
+    box-shadow: 7px 10px 11px 0px rgba(0,0,0,0.67);
+}
+
+.titleDetalle {
+    color: black;
+    background-color: #cd5454de;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.3em;
+    width: 80%;
+    border-radius: 5%;
+    text-align: center;
+    margin:20px;
+    padding: 10px 0;
+}
+
+.listProductos {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    margin: 0 20px 20px 20px;
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4em;
+    text-align: center;
+    background-color: #e36868b3;
+    letter-spacing: 2px;
+    box-shadow: 8px 8px 12px 0px rgba(0,0,0,0.67);
+}
+
+    .listProductos img {
+        width: 4em;
+        height: 4em;
+    }
+
+    .listProductosSecond {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+.totalPagar {
+    margin: 20px 40px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ef5350;
+    font-family: 'Mate SC', serif;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+    .totalPagar h2{
+        margin: 0 0 10px 0;
+    }
+
+
+/*ESTILOS DEL FORMULARIO*/
+
+.formCompra {
+    background-color: #f28e8c8e;
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 10px 10px 12px -1px rgba(0,0,0,0.65);
+}
+
+    .formCompra h5 {
+        background-color: #ea7573;
+        font-family: 'Mate SC', serif;
+        font-size: 1.8em;
+        padding: 20px 40px;
+        text-align: center;
+        text-decoration: underline;
+        text-shadow: 5px 1px 5px rgba(0,0,0,0.67);
+    }
+
+        .listForm {
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            color: black;
+            margin: 30px;
+            font-size: 1.8em;
+            letter-spacing: 2px;
+        }
+
+            .input {
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                margin: 0 20px 10px 20px;
+            }
+
+            .textField1{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                margin-bottom: 10px;
+            }
+
+
+/*---->MEDIA QUERIES-----*/
+
+@media screen and (min-width: 750px) {
+    .titleFormulario {
+        margin: 30px 50px;
+        font-size: 1.8em;
+    }
+
+    .titleDetalle {
+        width: 60%;
+        font-size: 1.6em;
+    }
+
+    .listProductos {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.8em;
+    }
+
+    .listProductosSecond h6{
+        margin-top: 10px;
+    }
+}
+
+
+@media screen and (min-width: 820px){
+    .totalPagar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 2em;
+    }
+
+        .totalPagar h2{
+            margin: 0;
+        }
+
+    .formCompra {
+        background-color: #f28e8c8e;
+        width: 60%;
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (min-width: 950px) {
+    .titleFormulario {
+        margin: 30px 100px;
+        font-size: 2.3em;
+    }
+
+    .titleDetalle {
+        width: 40%;
+        font-size: 1.9em;
+    }
+
+    .listProductos {
+        width: 80%;
+        font-size: 2.3em;
+    }
+
+}
+
+
+@media screen and (min-width: 1350px) {
+    .textField1{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap:10px;
+        margin-bottom: 10px;
+    }
+}
+
+

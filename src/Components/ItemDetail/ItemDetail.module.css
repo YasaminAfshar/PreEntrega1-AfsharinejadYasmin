@@ -6,6 +6,7 @@
 }
 
 .containerDetail {
+    width: 90%;
     background-color: #e57373;
     height: 100%;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;

@@ -4,7 +4,14 @@
 import ItemList from "../ItemList/ItemList";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { productos } from "../../productsMock";
+
+import { db } from "../../firebaseConfig";
+import {collection, getDocs, query, where} from "firebase/firestore"
+
+//Importar archivo de libreria
+import PacmanLoader from "react-spinners/PacmanLoader";
+
+
 
 const ItemListContainer = () => {
 
@@ -12,28 +19,72 @@ const ItemListContainer = () => {
 
   const [catalogo, setCatalogo] = useState([]);
 
-  const productosFiltrados = productos.filter(
-    (elemento) => elemento.category === categoryId
-  );
-
   useEffect(() => {
-    const listaProductos = new Promise((resolve, reject) => {
-      resolve(categoryId ? productosFiltrados : productos);
-    });
 
-    listaProductos
-      .then((res) => {
-        setCatalogo(res);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      const itemCollection = collection(db, "productos");
+
+      let respuesta = undefined;
+
+      if (categoryId) {
+        const q = query(itemCollection, where("category", "==", categoryId));
+        respuesta = getDocs(q);
+        
+      } else {
+        respuesta = getDocs(itemCollection);
+      }
+
+      respuesta
+      .then((respuesta) => {
+          let products = respuesta.docs.map((elemento) => {
+            return {
+              ...elemento.data(),
+              id: elemento.id,
+            };
+          });
+
+          setCatalogo(products);
+        });
+
   }, [categoryId]);
+
+  if (catalogo.length === 0) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          margin: "50px",
+          height: "100vh",
+        }}
+      >
+        <h1
+          style={{
+            fontSize: "3em",
+            fontFamily: "'Righteous', cursive",
+            letterSpacing: "4px",
+            textAlign: "center",
+            color: "#b71c1c",
+            textShadow: "3px 2px 4px #f03939",
+          }}
+        >
+          Cargando catalogo.....
+          <div style={{ marginTop: "30px" }}>
+            <PacmanLoader
+              color="#f03939"
+              size={80}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+          </div>
+        </h1>
+      </div>
+    );
+  }
 
   return (
     <div
       style={{
-        backgroundColor: " #cb6452cf",
+        backgroundColor: " #cb6452cf"
       }}
     >
       <div style={{ display: "flex", justifyContent: "center" }}>

@@ -34,11 +34,11 @@ const Navbar = ( { children } ) => {
         </Link>
       </ul>
 
-      <CartWidget />
+      <CartWidget/>
 
       {children}
 
-    </div>
+    </div> 
   );
 };
 

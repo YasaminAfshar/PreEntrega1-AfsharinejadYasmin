@@ -1,4 +1,8 @@
 
+//Importar archivos compartidos
+import {useContext} from "react"
+import { CartContext } from "../../Context/CartContext";
+
 //Importar Link de Router
 import { Link } from "react-router-dom";
 
@@ -11,11 +15,15 @@ import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutl
 
 const CartWidget = () => {
 
+  const {totalCantidadProductos} = useContext(CartContext)
+
+  const total = totalCantidadProductos()
+
   return (
     <Link to="/cart">
       <div className={style.cartContainer}>
-        <AddShoppingCartOutlinedIcon sx={{ fontSize: 50, color: "black" }} />
-        <span>0</span>
+        <AddShoppingCartOutlinedIcon sx={{ fontSize: 40, color: "black" }} />
+        <span>{total}</span>
       </div>
     </Link>
   );

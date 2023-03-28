@@ -62,14 +62,20 @@ const ItemDetail = ({ element }) => {
               padding: "10px 0 5px 0",
               textAlign: "center",
               fontWeight: "700",
+              letterSpacing: "4px",
             }}
           >
             $ {element.precio}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Link to={`/item/${element.id}`} style={{ textDecoration: "none", display:"block", alignself: "center" }}>
+      <CardActions sx={{display:"flex", justifyContent:"center"}}>
+        <Link
+          to={`/item/${element.id}`}
+          style={{
+            textDecoration: "none"
+          }}
+        >
           <Button
             variant="contained"
             color="secondary"
@@ -78,11 +84,10 @@ const ItemDetail = ({ element }) => {
               fontSize: "1.2em",
               fontWeight: "700",
               backgroundColor: "#ab47bc",
-              marginLeft: "70px",
-              marginBottom: "10px",
+              marginBottom: "10px"
             }}
           >
-            Ver detalle <AddCircleOutlineIcon/>
+            Ver detalle <AddCircleOutlineIcon />
           </Button>
         </Link>
       </CardActions>
