@@ -118,7 +118,7 @@ const Cart = () => {
                     <img
                       src="https://res.cloudinary.com/dsrdpgpzy/image/upload/v1679961216/MULTIMEDIA/cartEmpty-20-10-2020_epadm3.png"
                       alt="Imágen sobre el carrito vacio"
-                      style={{ margin: "auto", display: "flex"}}
+                      style={{ margin: "auto", display: "flex", width:"100%"}}
                     />
                   </div>
                 ) : (
