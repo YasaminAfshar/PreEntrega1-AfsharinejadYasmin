@@ -29,4 +29,6 @@ Se ha realizado un Ecommerce como tienda online llamado "Mundo Lana" donde se si
 - [React Spinners](https://www.npmjs.com/package/react-spinners): se utilizó para aplicar el efecto de carga en la página mientras se espera que se procese y se muestre el catálogo de productos. 
 - [SweerAlert2](https://sweetalert2.github.io/): se utilizó esta librería para aplicar alertas en la página.
 
-### Acceder al link 
+### Acceder al link donde se subió el proyecto en VERCEL
+
+TIENDA ONLINE MUNDO LANA: [MUNDO LANA](https://mundo-lana.vercel.app/category/kit)
